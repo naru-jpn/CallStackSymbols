@@ -28,7 +28,7 @@ for callStackSymbol in callStackSymbols {
 
 `DLADDR` is struct defined <a href="./Sources/CallStackSymbols/DLADDR.swift">here</a>.
 
-This library internally call `Thread.callStackSymbols`. <a href="https://developer.apple.com/documentation/foundation/thread/1414836-callstacksymbols">Documentation</a> says _Each element is an NSString object with a value in a format determined by the backtrace_symbols() function_.
+This library internally call `Thread.callStackSymbols`. <a href="https://developer.apple.com/documentation/foundation/thread/1414836-callstacksymbols">Documentation</a> of `Thread.callStackSymbols` says _Each element is an NSString object with a value in a format determined by the backtrace_symbols() function_.
 
 Information about `backtrace_symbols()` can be seen by `$ man backtrace_symbols` and manual says _backtrace_symbols() attempts to transform a call stack obtained by backtrace() into an array of human-readable strings using dladdr()_.
 
