@@ -7,9 +7,21 @@ Supports Swift Package Manager.
 
 ## Usage
 
+### Get current call stack symbols as DLADDR array.
+
 ```swift
-// Get call stack symbol as DLADDR array.
 let symbols = CallStackSymbols.current()
+```
+
+### Parse raw string from `Thread.callStackSymbols`.
+
+```swift
+let parser = CallStackSymbols.DLADDRParser()
+let callStackSymbols = Thread.callStackSymbols
+for callStackSymbol in callStackSymbols {
+  let dladdr = try parser.parse(input: callStackSymbol)
+  // ...
+}
 ```
 
 ### What is DLADDR?
