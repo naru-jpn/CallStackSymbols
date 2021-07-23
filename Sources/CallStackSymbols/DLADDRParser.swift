@@ -7,7 +7,9 @@
 
 import Foundation
 
-class DLADDRParser {
+public class DLADDRParser {
+    public init() { }
+
     /// Parse line of Thread.callStackSymbols to DLADDR.
     ///
     /// `input` follows next format.
@@ -17,7 +19,7 @@ class DLADDRParser {
     /// ```
     ///
     /// Whitespace after `{depth}` vanish when depth is larger than 10,000.
-    func parse(input: String) throws -> DLADDR {
+    public func parse(input: String) throws -> DLADDR {
         var input = input
 
         // Get depth and remove substring representing depth.
