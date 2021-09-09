@@ -8,7 +8,7 @@
 import Foundation
 
 /// This struct defined based on information from '$ man dladdr'.
-public struct DLADDR: Hashable, Equatable, Codable {
+public struct DLADDR {
     /// The depth of call.
     public let depth: Int
     /// The pathname of the shared object containing the address.
@@ -35,16 +35,4 @@ public struct DLADDR: Hashable, Equatable, Codable {
     public var callStackSymbolRepresentation: String {
         "\(depth) \(fname) 0x\(String(fbase, radix: 16)) \(sname) + \(saddr)"
     }
-
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(depth)
-        hasher.combine(fname)
-        hasher.combine(sname)
-        hasher.combine(saddr)
-    }
 }
-
-public func ==(lhs: DLADDR, rhs: DLADDR) -> Bool {
-    lhs.depth == rhs.depth && lhs.fname == rhs.fname && lhs.sname == rhs.sname && lhs.saddr == rhs.saddr
-}
-
