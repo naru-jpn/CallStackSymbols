@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Get current call stack as dladdr array representaion.
 public func current() throws -> [DLADDR] {
     let parser = DLADDRParser()
     let callStackSymbols: [String] = Thread.callStackSymbols

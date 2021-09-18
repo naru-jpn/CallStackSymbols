@@ -33,6 +33,6 @@ public struct DLADDR {
     }
 
     public var callStackSymbolRepresentation: String {
-        "\(depth) \(fname) 0x\(String(fbase, radix: 16)) \(sname) + \(saddr)"
+        String(format: "%-4d \(fname) 0x\(String(fbase, radix: 16)) \(sname) + \(saddr)", depth)
     }
 }

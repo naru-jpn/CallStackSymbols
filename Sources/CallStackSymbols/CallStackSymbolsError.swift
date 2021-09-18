@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Errors will occur when getting DLADDRs.
 public enum CallStackSymbolsError: Error {
+    /// Failed to parse call stack symbol.
     case failedToParseCallStackSymbol(String)
 }

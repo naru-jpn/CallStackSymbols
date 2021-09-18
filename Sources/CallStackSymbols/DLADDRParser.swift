@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Parse call stack symbol string to dladdr.
 public class DLADDRParser {
     public init() { }
 
@@ -18,7 +19,7 @@ public class DLADDRParser {
     /// (number with radix 10) (string) (number with radix 16) (string) + (number with radix 10)
     /// ```
     ///
-    /// Whitespace after `{depth}` vanish when depth is larger than 10,000.
+    /// Whitespace after `{depth}` vanish when depth is larger than 1,000.
     public func parse(input: String) throws -> DLADDR {
         var input = input
 
