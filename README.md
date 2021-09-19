@@ -1,5 +1,6 @@
-<p align='center'><b>CallStackSymbols</b></p>
-<p align='center'>Formatted call stack symbols for iOS.</p>
+# CallStackSymbols
+
+Formatted call stack symbols for iOS.
 
 ## Installation
 
